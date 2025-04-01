@@ -46,7 +46,7 @@ RUN autoreconf && \
 FROM scratch
 
 COPY --from=bird /src/bird/birdcl /usr/bin/birdc
-COPY --from=birdwatcher /src/birdwatcher/birdwatcher-linux-amd64 /usr/bin/birdwatcher
+COPY --from=birdwatcher /src/birdwatcher/birdwatcher-linux-arm64 /usr/bin/birdwatcher
 COPY --from=birdwatcher /src/birdwatcher/etc/birdwatcher/birdwatcher.conf /etc/birdwatcher/birdwatcher.conf
 
 EXPOSE 29184/tcp

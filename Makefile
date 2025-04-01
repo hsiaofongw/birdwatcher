@@ -3,7 +3,7 @@
 #
 
 PROG=birdwatcher
-ARCH=amd64
+ARCH=arm64
 
 APP_VERSION=$(shell cat VERSION)
 VERSION=$(APP_VERSION)_$(shell git rev-parse --short HEAD)
@@ -87,7 +87,7 @@ endif
 release: linux
 
 	mkdir -p ../birdseye-static/birdwatcher-builds/$(APP_VERSION)/
-	cp birdwatcher-linux-amd64 ../birdseye-static/birdwatcher-builds/$(APP_VERSION)/
+	cp birdwatcher-linux-arm64 ../birdseye-static/birdwatcher-builds/$(APP_VERSION)/
 	rm -f ../birdseye-static/birdwatcher-builds/latest
 	cd ../birdseye-static/birdwatcher-builds && ln -s $(APP_VERSION) latest
 
